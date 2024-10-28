@@ -19,7 +19,9 @@ TEMPLATE_DIR = BASE_DIR / "apps" / "templates"
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-ko+s9j-ueo@8)+cfn(6o5*u!z_s8ac7$6mxapl=p@)3qh=1ogn'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATICFILES_DIRS = [
+    BASE_DIR / "apps/static",  # Adjust this if necessary
+]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -118,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 
 # Default primary key field type

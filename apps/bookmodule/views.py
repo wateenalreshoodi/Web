@@ -20,3 +20,16 @@ def viewbook(request, bookId):
         targetBook = book2
     context = {'book': targetBook}
     return render(request, 'bookmodule/show.html', context)
+
+
+def links_view(request):
+    return render(request, 'bookmodule/links.html')
+
+def formatting_view(request):
+    return render(request, 'bookmodule/formatting.html')
+
+def listing_view(request):
+    return render(request, 'bookmodule/listing.html')
+
+def tables_view(request):
+    return render(request, 'bookmodule/tables.html')

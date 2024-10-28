@@ -1,0 +1,48 @@
+/* main.css */
+/* Link Styles */
+.link {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #333333; /* Dark gray color */
+    transition: background-color 0.3s;
+  }
+  
+  .link:visited {
+    color: white;
+  }
+  
+  .link:hover {
+    background-color: #555555; /* Slightly lighter gray on hover */
+  }
+  
+  .link:active {
+    background-color: #111111; /* Darker gray on click */
+  }
+/* Header styling */
+.formatted-header {
+    font-size: 24px;                 /* Font size for headers */
+    color: darkgreen;                /* Color of the header */
+    text-align: center;              /* Center align the header */
+}
+
+/* Nested list indentation */
+.nested-list {
+    padding-left: 20px;              /* Indentation for nested lists */
+}
+
+/* Table styling */
+.styled-table {
+    width: 100%;                     /* Full width for the table */
+    border-collapse: collapse;       /* Collapse borders */
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid black;         /* Border for table cells */
+    padding: 10px;                   /* Padding inside table cells */
+    text-align: left;                /* Align text to the left */
+}

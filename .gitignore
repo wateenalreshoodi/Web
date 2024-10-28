@@ -1,3 +1,4 @@
+<<<<<<< HEAD:.gitignore
 *.log
 *.pot
 *.pyc
@@ -24,3 +25,30 @@ venv.bak/
 **/__pycache__/
 **/.DS_Store
 .history 
+=======
+*.log
+*.pot
+*.pyc
+__pycache__/
+*.bak
+*.py[cod]
+*$py.class
+pip-log.txt
+pip-delete-this-directory.txt
+.ipynb_checkpoints
+.python-version
+celerybeat-schedule.*
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.mypy_cache/
+**/migrations
+*.DS_Store
+**/__pycache__/
+**/.DS_Store
+>>>>>>> a8c0cddfc32ad8213a6fa6694e132797f22ff43e:WebTechnologies/DjangoProjects/.gitignore
