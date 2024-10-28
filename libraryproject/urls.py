@@ -1,7 +1,7 @@
 """
 URL configuration for libraryproject project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+The `urlpatterns` list routes URLs to views. For more information, please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
 Examples:
 Function views
@@ -15,12 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-# from django.urls import path
 from django.urls import include, path
-import apps.bookmodule.views
+from apps.bookmodule import views  # Import your views
 
 urlpatterns = [
- path('admin/', admin.site.urls),
- path('books/', include("apps.bookmodule.urls")), #include urls.py of bookmodule app
- path('users/', include("apps.usermodule.urls")) #include urls.py of usermodule app
+    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),  # Add this line to handle the root URL
+    path('', include('apps.bookmodule.urls')), 
+    path('books/', include('apps.bookmodule.urls')),
+    path('users/', include('apps.usermodule.urls')),
 ]
