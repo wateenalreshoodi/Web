@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+    <h1>Books containing "and" in the title:</h1>
+    {% for book in books %}
+        <p>ID: {{ book.id }}, Title: {{ book.title }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>

@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from apps.bookmodule import views  # Import your views
+from apps.bookmodule import urls
+from apps.usermodule import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),  # Add this line to handle the root URL
-    path('', include('apps.bookmodule.urls')), 
-    path('books/', include('apps.bookmodule.urls')),
-    path('users/', include('apps.usermodule.urls')),
+    path('books/', include("apps.bookmodule.urls")), #include urls.py of bookmodule app
+    path('users/', include("apps.usermodule.urls")),  #include urls.py of usermodule app
+    path('', include("apps.bookmodule.urls")),
 ]
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>List of Books</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Books, recent, Learning, library">
+    <meta name="description" content="Books website">
+    <link rel="stylesheet" href="{% static 'bookmodule/styles.css' %}">
+</head>
+<body>
+    {% include "includes/header.html" %}
+    
+    <h1>List of Books</h1>
+    
+    <div>
+        <a href="{% url 'books.view_one_book' bookId=123 %}">
+            <h2>Internet & World Wide Web How to Program</h2>
+        </a>
+        <a href="{% url 'books.view_one_book' bookId=123 %}">
+            <img src="{% static 'bookmodule/book1.jpg' %}" alt="Book 1 Image" width="200" height="200">
+        </a>
+    </div>
+    <hr>
+    
+    <div>
+        <h2>C++ How to Program, Late Objects Version</h2>
+        <img src="{% static 'bookmodule/book2.jpg' %}" alt="Book 2 Image" width="200" height="200">
+    </div>
+    <hr>
+    
+    <div>
+        <h2>Images in Another Folder</h2>
+        <img src="{% static 'bookmodule/book3.jpg' %}" alt="Book 3 Image" width="200" height="200">
+    </div>
+    <hr>
+</body>
+</html>

@@ -1,48 +1,65 @@
-/* main.css */
-/* Link Styles */
-.link {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: center;
+/* Link Container Styling */
+#link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+/* External Link (New Tab) */
+.external-link {
+    background-color: #d4f4cc;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
     text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+}
+
+.external-link:hover {
+    background-color: #bff0aa;
+    color: darkred;
+}
+
+/* Internal Link (Same Tab) */
+.internal-link {
+    background-color: #666666;
+    color: orange;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+}
+
+.internal-link:hover {
+    background-color: #555555;
     color: white;
-    background-color: #333333; /* Dark gray color */
-    transition: background-color 0.3s;
-  }
-  
-  .link:visited {
+}
+
+/* Highlighted Link */
+.highlighted-link {
+    background-color: #000000;
     color: white;
-  }
-  
-  .link:hover {
-    background-color: #555555; /* Slightly lighter gray on hover */
-  }
-  
-  .link:active {
-    background-color: #111111; /* Darker gray on click */
-  }
-/* Header styling */
-.formatted-header {
-    font-size: 24px;                 /* Font size for headers */
-    color: darkgreen;                /* Color of the header */
-    text-align: center;              /* Center align the header */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 80%;
 }
 
-/* Nested list indentation */
-.nested-list {
-    padding-left: 20px;              /* Indentation for nested lists */
-}
-
-/* Table styling */
-.styled-table {
-    width: 100%;                     /* Full width for the table */
-    border-collapse: collapse;       /* Collapse borders */
-}
-
-.styled-table th, .styled-table td {
-    border: 1px solid black;         /* Border for table cells */
-    padding: 10px;                   /* Padding inside table cells */
-    text-align: left;                /* Align text to the left */
+.highlighted-link:hover {
+    background-color: #333333;
+    color: #ffd700;
 }
