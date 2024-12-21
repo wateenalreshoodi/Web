@@ -12,8 +12,23 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 
+# Base Directory
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Template Directory
 TEMPLATE_DIR = os.path.join(BASE_DIR, "apps" + os.sep + "templates")
+
+# Media Configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Installed apps, middleware, database, and other Django configurations
+# ...
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 

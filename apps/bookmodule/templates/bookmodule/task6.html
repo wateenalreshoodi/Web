@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 6 - Students Per City</title>
+</head>
+<body>
+    <h1>Number of Students in Each City</h1>
+    <ul>
+        {% for city in cities %}
+        <li>{{ city.city }}: {{ city.student_count }} students</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
