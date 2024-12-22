@@ -1,7 +1,16 @@
-<h1>Add a New Student</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ student_form.as_p }}
-    {{ address_form.as_p }}
-    <button type="submit">Save</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+</head>
+<body>
+    <h1>Add Student</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ student_form.as_p }}
+        {{ address_form.as_p }}
+        <button type="submit">Add Student</button>
+    </form>
+    <a href="{% url 'students.list' %}">Back to Students</a>
+</body>
+</html>

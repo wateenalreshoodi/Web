@@ -1,27 +1,12 @@
-<h1>Students</h1>
-<a href="{% url 'add_student' %}">Add Student</a>
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Addresses</th>
-        <th>Actions</th>
-    </tr>
-    {% for student in students %}
-    <tr>
-        <td>{{ student.name }}</td>
-        <td>{{ student.email }}</td>
-        <td>{{ student.phone }}</td>
-        <td>
-            {% for address in student.addresses.all %}
-                {{ address }}<br>
-            {% endfor %}
-        </td>
-        <td>
-            <a href="{% url 'edit_student' student.id %}">Edit</a> |
-            <a href="{% url 'delete_student' student.id %}">Delete</a>
-        </td>
-    </tr>
+<h1>List of Books</h1>
+<ul>
+    {% for book in books %}
+        <p>
+            Title: {{ book.title }} | Author: {{ book.author }} | Price: {{ book.price }}
+            <a href="{% url 'lab9_part1.editbook' book.id %}">Edit</a> | 
+            <a href="{% url 'lab9_part1.deletebook' book.id %}">Delete</a>
+        </p>
     {% endfor %}
-</table>
+</ul>
+
+<a href="{% url 'lab9_part1.addbook' %}">Add New Book</a>

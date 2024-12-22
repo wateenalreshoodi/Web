@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 # from django.urls import path
-from django.urls import include, path
 import apps.bookmodule.views
-
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path, include
+ 
 urlpatterns = [
  path('admin/', admin.site.urls),
  path('', apps.bookmodule.views.index), #add only this line of code
@@ -26,3 +28,7 @@ urlpatterns = [
  path('books/', include("apps.bookmodule.urls")), #include urls.py of bookmodule app
  path('users/', include("apps.usermodule.urls")) #include urls.py of usermodule app
 ]
+
+# Serve media files during development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

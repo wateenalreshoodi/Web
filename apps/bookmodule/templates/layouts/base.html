@@ -1,4 +1,28 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Book Module{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'books.index' %}">Home</a>
+            <a href="{% url 'books.aboutus' %}">About Us</a>
+            <a href="{% url 'books.list' %}">Books</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Book Module</p>
+    </footer>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
 <html>
 {% load static %}
 <head>
@@ -10,7 +34,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'styles.css' %}"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome CDN link -->
-    {% block stylesheets %}{% endblock stylesheets %}
+    <!-- {% block stylesheets %}{% endblock stylesheets %}
     {% block extra_css %}{% endblock extra_css %}
 </head>
 <body>
@@ -18,4 +42,4 @@
     {% block content %} {% endblock content %}
     {% include "includes/footer.html" %}
 </body>
-</html>
+</html> --> 
