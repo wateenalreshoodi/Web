@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Book List 2</title>
-</head>
-<body>
-    <h1>Book List 2</h1>
+<h1>Complex Query Results</h1>
+<ul>
     {% for book in books %}
-        <p>{{ book.title }} by {{ book.author }}</p>
+        <li>{{ book.title }} - ${{ book.price }}</li>
     {% endfor %}
-</body>
-</html>
+</ul>

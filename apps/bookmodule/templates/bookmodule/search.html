@@ -1,42 +1,8 @@
-{% extends "layouts/base.html" %}
-{% load static %}
-
-{% block title %}Searching Page{% endblock title %}
-
-{% block stylesheets %}
-<style>
-    .searchForm {
-        margin-top: 20px;
-    }
-
-    button {
-        color: #fff;
-        background-color: #17a2b8;
-        border: none;
-        padding: 16px 32px;
-        text-align: center;
-        font-size: 16px;
-        cursor: pointer;
-        transition-duration: 0.4s;
-    }
-
-    button:hover {
-        background-color: green;
-        color: white;
-    }
-</style>
-{% endblock stylesheets %}
-
-{% block content %}
-<form class="searchForm" method="post" action="">
+<h1>Search Books</h1>
+<form method="POST">
     {% csrf_token %}
-    <label>Keywords:</label>
-    <input type="text" name="keyword" placeholder="Enter a keyword"/>
-    <br/>
-    <label>Search in:</label>
-    <input type="checkbox" name="option1"/><label>Title</label>
-    <input type="checkbox" name="option2"/><label>Author</label>
-    <br/>
-    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+    <input type="text" name="keyword" placeholder="Enter keyword">
+    <label><input type="checkbox" name="option1"> Search in Title</label>
+    <label><input type="checkbox" name="option2"> Search in Author</label>
+    <button type="submit">Search</button>
 </form>
-{% endblock content %}
